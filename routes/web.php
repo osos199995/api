@@ -11,5 +11,11 @@
 |
 */
 
-Route::get('/{name?}','MyController@index');
 
+
+
+Route::resource('/makers','MakersController',['except'=>['edit','create']]);
+
+Route::resource('/vehicles','VehiclesController',['only'=> ['index']]);
+
+Route::resource('/makers.vehicles', 'MakerVehiclesController',['except'=>'edit','create']);

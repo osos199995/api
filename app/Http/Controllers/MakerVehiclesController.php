@@ -11,9 +11,9 @@ class MakerVehiclesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        return " heloo iam veicle of maker number $id";
     }
 
     /**
@@ -21,17 +21,8 @@ class MakerVehiclesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
@@ -45,7 +36,7 @@ class MakerVehiclesController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -54,10 +45,7 @@ class MakerVehiclesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.

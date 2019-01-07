@@ -14,6 +14,6 @@ class makers extends Model
 
 
     public function vehicle(){
-        $this->hasMany('App\vehicle');
+       return $this->hasMany('App\vehicle','maker_id');
     }
 }

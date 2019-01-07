@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\makers;
 use Illuminate\Http\Request;
 
 class MakersController extends Controller
@@ -13,7 +13,8 @@ class MakersController extends Controller
      */
     public function index()
     {
-        //
+        $makers=makers::all();
+        return response()->json(['data' => $makers] ,200);
     }
 
     /**
@@ -45,7 +46,11 @@ class MakersController extends Controller
      */
     public function show($id)
     {
-        //
+        $maker =makers::find($id);
+        if(!$maker){
+            return  response()->json(['message'=>'this maker does not exist','code'=>'404',404]);
+        }
+        return response()->json(['data'=>$maker],200);
     }
 
     /**

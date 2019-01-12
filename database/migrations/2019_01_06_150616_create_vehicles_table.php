@@ -20,7 +20,7 @@ class CreateVehiclesTable extends Migration
             $table->float('capacity');
             $table->float('speed');
             $table->integer('maker_id')->unsigned();
-            $table->foreign('maker_id')->references('id')->on('makers');
+
             $table->timestamps();
         });
     }

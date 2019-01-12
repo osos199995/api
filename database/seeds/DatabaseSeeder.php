@@ -3,6 +3,9 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\makers;
+use App\User;
+use App\vehiclesSeed;
+use App\UserSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,6 +20,7 @@ class DatabaseSeeder extends Seeder
 
 
         makers::truncate();
+        User::truncate();
 
 
 
@@ -25,5 +29,6 @@ class DatabaseSeeder extends Seeder
 
          $this->call('makerSeed');
          $this->call('vehiclesSeed');
+         $this->call('UserSeeder');
     }
 }
